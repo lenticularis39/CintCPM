@@ -1,1 +1,34 @@
 CintCPM - 32-bit Cintcode interpreter for CP/M-86
+
+Currently only contains a Hello world for CP/M-86 compiled by GCC and
+linked by RetroLinker.
+
+Build instructions:
+
+First, download all submodules:
+
+$ git submodule update --init --recursive
+
+Then, build RetroLinker and cpmtools:
+
+$ cd RetroLinker
+$ make
+$ cd ..
+
+$ cd cpmtools
+$ ./configure
+$ make
+$ cd ..
+
+Then, build Hello world:
+
+$ cd hello
+$ make
+$ cd ..
+
+Finally, run test VM with Hello world binary:
+
+$ cd test
+$ ./test.sh # Requires qemu-system-i386
+A> B:HELLO
+Hello world from GCC!
