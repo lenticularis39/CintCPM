@@ -1,3 +1,6 @@
 [submodule "RetroLinker"]
 	path = RetroLinker
 	url = https://github.com/BinaryMelodies/RetroLinker
+[submodule "cpmtools"]
+	path = cpmtools
+	url = https://github.com/lipro-cpm4l/cpmtools.git
