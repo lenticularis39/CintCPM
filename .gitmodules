@@ -1,0 +1,3 @@
+[submodule "RetroLinker"]
+	path = RetroLinker
+	url = https://github.com/BinaryMelodies/RetroLinker
