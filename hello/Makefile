@@ -1,11 +1,13 @@
 CFLAGS = -m16
+OBJS = init.o hello.o
 
 .PHONY: clean
 
-hello.cmd: hello.o
-	../RetroLinker/link -F cpm86_tiny -o hello.cmd hello.o
+hello.cmd: $(OBJS)
+	../RetroLinker/link -F cpm86_tiny -o hello.cmd init.o hello.o
 
-hello.o: hello.c
+%.o: %.c
+	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
 
 clean:
-	rm -rf hello.cmd hello.o
+	rm -rf hello.cmd $(OBJS)

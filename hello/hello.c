@@ -3,7 +3,7 @@ void print_string(char *s);
 void exit_prog();
 int fact(int i);
 
-void _start() {
+void main() {
 	int f;
 	print_string("Happy New Year from CP/M-86 32-bit code,\r\n");
 	print_string("compiled by Fedora official GCC,\r\n");
@@ -15,7 +15,6 @@ void _start() {
 	print_char('0' + f / 10);
 	f -= (f / 10) * 10;
 	print_char('0' + f);
-	exit_prog();
 }
 
 int fact(int i) {
