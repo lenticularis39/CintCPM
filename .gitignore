@@ -2,3 +2,4 @@
 *.cmd
 *.s
 .test*.img
+/libcpm/libcpm.c

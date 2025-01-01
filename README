@@ -9,7 +9,7 @@ First, download all submodules:
 
 $ git submodule update --init --recursive
 
-Then, build RetroLinker and cpmtools:
+Then, build RetroLinker, cpmtools, and libcpm:
 
 $ cd RetroLinker
 $ make
@@ -17,6 +17,10 @@ $ cd ..
 
 $ cd cpmtools
 $ ./configure
+$ make
+$ cd ..
+
+$ cd libcpm
 $ make
 $ cd ..
 
