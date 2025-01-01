@@ -12,17 +12,18 @@ void print_string(char *s) {
 }
 
 void read_line(char *buffer, unsigned char len) {
-	int real_len = len - 3;
-	buffer[0] = buffer[1] = real_len;
+	int n;
+	buffer[0] = buffer[1] = len - 1;
 
 	asm("mov %0, %%edx" : : "r"(buffer) :);
 	asm("mov $0x0a, %cl");
 	asm("int $0xe0");
+	n = buffer[1];
 
-	for (int i = 0; i < real_len; i++) {
+	for (int i = 0; i < n; i++) {
 		buffer[i] = buffer[i + 2];
 	}
-	buffer[real_len] = '\0';
+	buffer[n] = '\0';
 }
 
 void exit_prog(char abort_code) {
