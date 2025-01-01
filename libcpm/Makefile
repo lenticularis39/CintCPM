@@ -1,5 +1,6 @@
 CFLAGS = -m16
-SRCS = init.c
+CPPFLAGS = -I../include
+SRCS = init.c io.c
 
 all: libcpm.o
 

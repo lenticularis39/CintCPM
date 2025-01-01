@@ -1,4 +1,5 @@
 CFLAGS = -m16
+CPPFLAGS = -I../include
 OBJS = hello.o
 
 .PHONY: clean
