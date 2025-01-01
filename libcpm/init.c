@@ -2,7 +2,9 @@ void main();
 
 void _start() {
 	main();
-	asm("mov $0, %dl");
-	asm("mov $0, %cl");
-	asm("int $0xe0");
+	asm volatile(
+	"mov $0, %dl\n\t"
+	"mov $0, %cl\n\t"
+	"int $0xe0"
+	);
 }
