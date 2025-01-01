@@ -33,6 +33,6 @@ $ cd ..
 Finally, run test VM with Hello world binary:
 
 $ cd test
-$ ./test.sh # Requires qemu-system-i386
+$ ./run.sh hello # Requires qemu-system-i386
 A> B:HELLO
 Hello world from GCC!
