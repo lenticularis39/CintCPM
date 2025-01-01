@@ -24,6 +24,7 @@ void read_line(char *buffer, unsigned char len) {
 	: : "r"(buffer) :);
 	n = buffer[1];
 
+	print_char('\n');
 	for (int i = 0; i < n; i++) {
 		buffer[i] = buffer[i + 2];
 	}
