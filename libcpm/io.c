@@ -11,7 +11,8 @@ void print_string(char *s) {
 		print_char(*s++);
 }
 
-void exit_prog() {
+void exit_prog(char abort_code) {
+	asm("mov %0, %%dl" : : "r"(abort_code) :);
 	asm("mov $0, %cl");
 	asm("int $0xe0");
 }
