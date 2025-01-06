@@ -1,12 +1,6 @@
 #include <cpm.h>
 
-struct mcb {
-	unsigned short base;
-	unsigned short length;
-	unsigned char ext;
-} __attribute__((packed));
-
-static char _get_maximum_memory(struct mcb *m) {
+char get_maximum_memory(struct mcb *m) {
 	char retval;
 
 	asm volatile(
@@ -19,7 +13,7 @@ static char _get_maximum_memory(struct mcb *m) {
 	return retval;
 }
 
-static char _allocate_memory(struct mcb *m) {
+char allocate_memory(struct mcb *m) {
 	char retval;
 
 	asm volatile(
@@ -32,7 +26,7 @@ static char _allocate_memory(struct mcb *m) {
 	return retval;
 }
 
-static char _free_memory(struct mcb *m) {
+char free_memory(struct mcb *m) {
 	char retval;
 
 	asm volatile(
@@ -44,4 +38,3 @@ static char _free_memory(struct mcb *m) {
 	
 	return retval;
 }
-
